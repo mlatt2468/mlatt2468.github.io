@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login page</title>
+</head>
+<a name="login"></a>
+<body background="https://github.com/mlatt2468/mlatt2468.github.io/blob/master/be.jpg?raw=true">
+	<br>
+	<h1 style="color: #33ECFF" style="font-family: cursive;">Login Page</h1>
+	<br>
+<form>
+	<label for="id" style="font-family: cursive;"><big style= "color: #BEFF33"><font size="6"> username:</font></big></label>
+	<input type="ID" id="id" >
+</form>
+<form name="login" onsubmit="checkPswd()">
+    <label for="pswd" style="font-family: cursive;"> <big style= "color: #BEFF33"><font size="6"> password:</font></big> </label>
+    <input type="password" id="pswd">
+    <input type="button" value="login" onclick="checkPswd()"/>
+</form>
+
+<script type="text/javascript">
+    function checkPswd() {
+    	event.preventDefault();
+    	var comfirmID = "jacklee";
+    	var inputID = document.getElementById("id").value;
+        var confirmPassword = "jack123";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword && inputID == comfirmID) {
+             window.open('my.html', '_self');
+        }
+        else{
+            alert("Username or password does not match.");
+        }
+    }
+</script>
+	
+</body>
+</html>
